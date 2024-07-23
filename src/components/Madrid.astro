@@ -1,0 +1,79 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+    <img src="/img/madrid.svg" alt="">
+    <div class="conjunto">
+        <div>
+            <h2 class="bold">Visita el corazón de</h2>
+            <h2 class="special-font">MADRID</h2>
+            <Button href="" content="Mira la disponibilidad" type="dark"></Button>
+        </div>
+        <div class="image">
+            <img class="fiat" src="/img/fiat.png" alt="Fiat 500">
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        margin-top: 20vw;
+    }
+
+    h2 {
+        color: #212121;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    div {
+        background-color: #04D0B5;
+        margin: 0;
+        padding-bottom: 5vw;
+    }
+
+    img {
+        margin: 0px;
+        max-width: 100%;
+        width: 100vw;
+    }
+
+    .conjunto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10vw;
+        margin-top: -7px;
+        max-width: 100%;
+    }
+
+    .special-font {
+        font-family: Dissfunction;
+        font-size: 7vw;
+        color: #212121;
+        margin-top: 0;
+        margin-bottom: 3vw;
+        font-weight: 300;
+    }
+
+    @font-face {
+        font-family: 'Dissfunction';
+        src: url('fonts/Dissfunction.ttf');
+        font-style: normal;
+        font-display: swap;
+    }
+
+    .image {
+        mix-blend-mode: darken;
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+
+    .fiat {
+        max-width: fit-content;
+        width: 50vw;
+    }
+
+</style>

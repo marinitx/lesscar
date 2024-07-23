@@ -1,0 +1,51 @@
+<nav>
+    <a id="logo" href="/">
+        <?xml version="1.0" encoding="utf-8" ?>
+        <img src="/img/logo.svg" />
+    </a>
+    <ul>
+        <li><a href="#alquila">Alquila</a></li>
+        <li><a href="#instrucciones">¿Cómo se usa?</a></li>
+        <li><a href="#planes">Planes en Madrid</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<style>
+   nav {
+        display: flex;
+        gap: 6vw;
+        padding: 5px 25px;
+        align-items: center;
+        height: fit-content;
+        margin: auto;
+        top: 0;
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        margin-right: 6vw;
+        font-size: 1.3vw;
+    }
+
+    li:last-child {
+        margin-right: 0vw;
+    }
+    
+    img {
+        width: 10vw;
+    }
+
+</style>

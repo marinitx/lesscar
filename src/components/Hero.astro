@@ -1,0 +1,80 @@
+---
+import Button from './Button.astro'
+---
+<section>
+    <div class="left">
+        <h1>Alquiler de coches en Madrid</h1>
+        <Button href="" content="Reserva ahora" type="light"></Button>
+    </div>
+    <div class="right">
+        <div class="shadow">
+            <img src="/img/cocheprincipal.png" alt="Coche de alquiler">
+        </div>
+    </div>
+</section>
+
+<style>
+    html {
+        overflow-x: hidden;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-left: 8vw;
+        margin-top: 4vw;
+        max-width: 100%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 6vw;
+        flex-grow: 1;
+        margin-bottom: 2vw; /* Espacio entre el h1 y el botón */
+        line-height: 7vw;
+        max-width: 60vw;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        max-width: 60%;
+        position: relative;
+    }
+
+    .right {
+        max-width: 100%;
+        height: auto;
+        margin-top: 100px;
+        max-width: 100%;
+        position: absolute;
+        left: 650px;
+    }
+
+    img {
+        max-width: 100%;
+        width: 115vh;
+    }
+
+    .shadow {
+    position: relative; /* Necesario para posicionar la sombra correctamente */
+    }
+
+    .shadow::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    width: 120%;
+    height: 120%;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, rgba(4, 208, 181, 0.65), rgba(0, 51, 44, 0.65));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Coloca la sombra detrás de la imagen */
+    filter: blur(3vw);
+}
+
+</style>

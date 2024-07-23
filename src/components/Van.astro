@@ -1,0 +1,49 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="furgo">
+    <div class="image">
+        <div class="rectangle"></div>
+        <img src="/img/furgoneta.png" alt="">
+    </div>
+    <div class="text">
+        <h2><span class="normal">¡Sin preocupaciones! </span><span class="bold">Alquila una furgoneta y mueve tus cosas cómodamente.</span></h2>
+        <Button href="" content="Mira la disponibilidad" type="dark"></Button>
+    </div>
+</section>
+
+<style>
+    h2 {
+        color: white;
+        max-width: 60%;
+        margin-top: 0;
+        padding-top: 20px;
+        line-height: 3.4vw;
+    }
+
+    .image {
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+
+    img {
+        max-width: fit-content;
+        width: 65vw;
+    }
+
+    .text {
+        background-color: #1AAA88;
+        padding-left: 90px;
+        padding-bottom: 70px;
+    }
+
+    .rectangle {
+        width: 100%; /* Ancho del rectángulo */
+        height: 10.3vw; /* Alto del rectángulo */
+        background-color: #1AAA88; /* Color de fondo del rectángulo */
+    }
+
+    
+</style>
