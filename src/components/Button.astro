@@ -17,8 +17,8 @@ const { href, content, type = 'light' } = Astro.props;
         font-weight: 600;
         color: white;
         font-size: 1.4vw;
-        border-radius: 20px;
-        max-width: fit-content;
+        border-radius: 2vw;
+        max-width: auto;
         cursor: pointer;
     }
 
@@ -33,5 +33,15 @@ const { href, content, type = 'light' } = Astro.props;
     .button:hover {
         background-color: #115a49;
     }
+
+    /* Estilos para pantallas pequeñas (dispositivos móviles) */
+    @media (max-width: 768px) {
+        .button {
+            font-size: 3vw;
+            padding: 2vw;
+            width: 100%; /* Hace que el ancho del botón ocupe todo el ancho de la pantalla */
+            box-sizing: border-box; /* Incluye el padding y border dentro del ancho total */
+    }
+}
 
 </style>

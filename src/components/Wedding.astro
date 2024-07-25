@@ -21,6 +21,10 @@ import Button from "./Button.astro"
         margin-top: 10vw;
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
+        max-width: 100%;
+        width: auto;
+        overflow: hidden;
     }
 
     h2 {
@@ -41,19 +45,19 @@ import Button from "./Button.astro"
 
     .car {
         margin: 0;
+        position: absolute;
         width: 55vw;
     }
 
     .white {
         margin: 0;
-        position: absolute;
+        position: relative;
         z-index: -1;
-        margin-top: 23vw;
         max-width: 100%;
     }
 
     .shadow {
-    position: relative; /* Necesario para posicionar la sombra correctamente */
+        position: relative; /* Necesario para posicionar la sombra correctamente */
     }
 
     .shadow::before {
@@ -69,4 +73,35 @@ import Button from "./Button.astro"
     z-index: -1; /* Coloca la sombra detrás de la imagen */
     filter: blur(60px);
 }
+
+/* Estilos para pantallas pequeñas (dispositivos móviles) */
+    @media (max-width: 768px) {
+        .text {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        h2 {
+            width: 100%;
+        }
+
+        .big {
+            justify-content: center;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 6vw;
+            padding-bottom: 6vw;
+            padding-right: 6vw;
+        }
+
+        .car {
+            width: 70vw;
+        }
+
+        .white {
+
+        }
+    }
+
 </style>

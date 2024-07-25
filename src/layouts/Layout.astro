@@ -11,7 +11,7 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Alquiler de coches en Madrid" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -43,6 +43,8 @@ const { title } = Astro.props;
 		font-family: 'General Sans', normal;
 		background: #212121;
 		background-size: cover;
+		max-width: 100%;
+		width: 100%;
 	}
 	.bold {
 		font-size: 2.7vw;
@@ -53,4 +55,37 @@ const { title } = Astro.props;
 		font-size: 2.7vw;
 		font-weight: 500;
 	}
+
+	a {
+		font-size: 1.2vw;
+	}
+
+	h1 {
+        color: white;
+        font-size: 6vw;
+        flex-grow: 1;
+        margin-bottom: 2vw; /* Espacio entre el h1 y el botón */
+        line-height: 7vw;
+        max-width: 60vw;
+    }
+
+	@media (max-width: 768px)
+	{
+		.bold {
+			font-size: 4.5vw;
+			line-height: 5vw;
+		}
+
+		.normal {
+			font-size: 4.5vw;
+			line-height: 5vw;
+		}
+
+		a {
+			font-size: 2vw;
+		}
+
+		
+	}
+
 </style>
