@@ -1,40 +1,34 @@
-# Astro Starter Kit: Basics
+# 🚙 Lesscar Platform
 
-```sh
-npm create astro@latest -- --template basics
-```
+<img src="https://github.com/user-attachments/assets/5d75a8b9-b79f-4d52-b42e-2abd68831cdf" alt="Logo" width="200"/>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Lesscar es una plataforma innovadora para el alquiler de coches que busca ofrecer una experiencia sencilla y eficiente tanto para los arrendatarios como para los propietarios de vehículos. Actualmente, el proyecto se encuentra en fase de desarrollo, con un diseño inicial creado en Figma y un desarrollo en curso utilizando Astro.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Estado del Proyecto
 
-## 🚀 Project Structure
+**Estado Actual:** En construcción 🚧
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tecnologías Utilizadas
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Diseño:** Figma
+- **Desarrollo Frontend:** Astro
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Capturas de Pantalla
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![video](https://github.com/user-attachments/assets/2188f4f2-f0ca-4f16-92e9-f985ba2ade73)
 
-Any static assets, like images, can be placed in the `public/` directory.
+![screencapture-localhost-4321-2024-07-25-23_12_26](https://github.com/user-attachments/assets/43f5b7f7-9bf4-4381-87f1-ba369ed5c9e1)
+
+
+## Funcionalidades Planeadas
+
+- Registro y autenticación de usuarios
+- Búsqueda y filtro de vehículos
+- Gestión de reservas
+- Pagos seguros
+- Reseñas y calificaciones
 
 ## 🧞 Commands
 
