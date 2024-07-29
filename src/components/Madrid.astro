@@ -5,9 +5,8 @@ import Button from "./Button.astro";
 <section>
     <img src="/img/madrid.svg" alt="">
     <div class="conjunto">
-        <div>
-            <h2 class="bold">Visita el corazón de</h2>
-            <h2 class="special-font">MADRID</h2>
+        <div id="text">
+            <h2 class="bold">Visita el corazón de <span class="special-font">MADRID</span></h2>
             <Button href="" content="Mira la disponibilidad" type="dark"></Button>
         </div>
         <div class="image">
@@ -24,7 +23,7 @@ import Button from "./Button.astro";
     h2 {
         color: #212121;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 4vw;
     }
 
     div {
@@ -43,7 +42,6 @@ import Button from "./Button.astro";
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 10vw;
         margin-top: -7px;
         max-width: 100%;
     }
@@ -74,6 +72,40 @@ import Button from "./Button.astro";
     .fiat {
         max-width: fit-content;
         width: 50vw;
+    }
+
+    #text {
+        margin-left: 6vw;
+    }
+
+    @media (max-width: 768px) {
+
+        .conjunto {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            padding-top: 7vw;
+            
+        }
+
+        #text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 0;
+            width: 85%;
+        }
+
+        .image {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .fiat {
+            width: 75%;
+        }
     }
 
 </style>
