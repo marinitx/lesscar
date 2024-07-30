@@ -9,7 +9,11 @@
             <img src="/img/logo.svg" />
         </a>
       <button class="hamburger" id="hamburger">
-        &#9776; <!-- Icono de hamburguesa -->
+        <!-- Icono de hamburguesa -->
+      <svg class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <!-- Icono de cruz -->
+      <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
       </button>
     </div>
     <div class="nav-menu" id="nav-menu">
@@ -19,8 +23,10 @@
       <a href="#">Contacto</a>
     </div>
   </nav>
+  <div id="overlay" class="overlay"></div>
   
-  <style>
+  <!-- para pantallas pequeñas -->
+  <style> 
     body {
       margin: 0;
     }
@@ -41,10 +47,6 @@
       top: 0;
       z-index: 1000;
     }
-
-    a {
-        margin-left: 30px; 
-    }
   
     .nav-container {
       display: flex;
@@ -53,13 +55,44 @@
       width: 100%;
     }
   
+    .hamburger.active .icon-hamburger {
+      display: none;
+    }
+
+    .hamburger.active .icon-close {
+      display: block;
+    }
+
+    .overlay.active {
+      display: block;
+      position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 990;
+    }
+    
     .hamburger {
-      font-size: 30px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: block;
+        position: relative;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        z-index: 995;
+    }
+
+    .icon-close {
+        display: none;
+        z-index: 995;
     }
   
     .nav-menu {
@@ -90,6 +123,13 @@
     .nav-menu.active {
       left: 0;
     }
+
+    .nav-menu.active a:hover {
+        background-color: rgb(232, 232, 232);
+        border-radius: 15px;
+    }
+
+    /* para pantallas grandes */
   
     @media (min-width: 768px) {
       .nav-menu {
@@ -105,11 +145,16 @@
     .nav-menu a {
         padding: 10px 20px;
         color: white;
-      }
-  
-      .hamburger {
+    }
+
+    .hamburger {
         display: none;
-      }
+    }
+
+    .overlay {
+        display: none;
+    }
+
     }
   </style>
   
