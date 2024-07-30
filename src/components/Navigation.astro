@@ -1,0 +1,117 @@
+---
+// Navigation.astro
+---
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <?xml version="1.0" encoding="utf-8" ?>
+            <img src="/img/logo.svg" />
+        </a>
+      <button class="hamburger" id="hamburger">
+        &#9776; <!-- Icono de hamburguesa -->
+      </button>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="#">Alquila</a>
+      <a href="#">¿Cómo funciona?</a>
+      <a href="#">Planes en Madrid</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+  
+  <style>
+    body {
+      margin: 0;
+    }
+
+    img {
+        max-width: 130px;
+    }
+  
+    .navbar {
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    a {
+        margin-left: 30px; 
+    }
+  
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .hamburger {
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s ease;
+      z-index: 999;
+      flex-wrap: nowrap;
+    }
+  
+    .nav-menu a {
+      color: black;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    @media (min-width: 768px) {
+      .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        transition: none;
+    }
+    
+    .nav-menu a {
+        padding: 10px 20px;
+        color: white;
+      }
+  
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+  
+  <script src="/toggleMenu.js" type="module"></script>
+  

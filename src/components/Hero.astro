@@ -5,12 +5,12 @@ import Button from './Button.astro'
     <div class="hero">
         <div class="left">
             <h1>Alquiler de coches en Madrid</h1>
+            <Button href="" content="Reserva ahora" type="light"></Button>
         </div>
         <div class="right">
-             <img src="/img/cocheprincipal.png" alt="Coche de alquiler">
+            <img src="/img/cocheprincipal.png" alt="Coche de alquiler" draggable="false">
         </div>
     </div>
-    <Button href="" content="Reserva ahora" type="light"></Button>
 </section>
 
 <style>
@@ -18,17 +18,21 @@ import Button from './Button.astro'
         overflow-x: hidden;
     }
 
+    h1 {
+        min-width: 60vw;
+    }
+
     section {
         display: flex;
         flex-direction: column;
-        margin-left: 8vw;
+        margin-left: 6em;
         max-width: 100%;
     }
 
     .hero {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: end;
         overflow: hidden;
     }
 
@@ -36,9 +40,7 @@ import Button from './Button.astro'
         display: flex;
         flex-direction: column;
         align-items: left;
-        max-width: 60%;
-        position: relative;
-        margin-top: 4vw;
+        margin-top: 30px;
     }
 
     .right {
@@ -59,22 +61,32 @@ import Button from './Button.astro'
     /* Estilos para pantallas pequeñas (dispositivos móviles) */
     @media (max-width: 768px) {
         section {
-            margin-right: 5vw;
-            margin-bottom: 35vw;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 180px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .left {
-            max-width: 80%;
-            margin-bottom: 1vw;
+            margin-bottom: 20px;
+            min-width: 0;
+        }
+
+        h1 {
+            min-width: 0;
         }
 
         .right {
-            left: 25vw;
-            top: 30vw;
+            left: 90px;
+            top: 250px;
+            z-index: 0;    
         }
 
         img {
-            width: 75vw;
+            width: 90vw;
         }
     }
 
